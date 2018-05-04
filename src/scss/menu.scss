@@ -5,17 +5,52 @@ $h2Size: 2.5rem;
 $h3Size: 2rem;
 $primaryFont : "abel";
 
+body {
+    margin: 0;
+    padding: 0;
+}
 .container {
     font-family: $primaryFont;
     display: flex;
     flex-direction: column;
     color: $grayText;
-    margin: 0 1.5rem;
+    margin: 0 auto;
+section {
+    width: 60%;
+    margin: 0 auto;
+}
 
 
-    // nav {
-
-    // }
+    nav {
+        background-color: $navGray;
+        width: 100%;
+        display: flex;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .navInner {
+            width: 100%;
+            margin: 5px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: 120px;
+                margin: 0 auto;
+            }
+            .navMenu {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                padding: 10px 20px;
+                color: $grayText;
+                a:first-child {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
     
     .sections {
         display: flex;
@@ -43,6 +78,19 @@ $primaryFont : "abel";
 
 @media only screen and (min-width: 620px) {
     .container {
+        nav {
+            .navInner {
+                width: 60%;
+                flex-direction: row;
+                justify-content: space-between;
+                img {
+                    margin: 0;
+                }
+                .navMenu {
+                    flex-basis: 400px;
+                }
+            }
+        }
         .sections {
             display: flex;
             flex-flow: row wrap;
