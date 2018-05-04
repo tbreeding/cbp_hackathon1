@@ -1,0 +1,174 @@
+
+
+$navGray: #F8F9FA;
+$grayText: #F8F9FA - #999999;
+$darkBlue: #31373E;
+
+$h1Size: 3rem;
+$h2Size: 2rem;
+$h3Size: 1.8rem;
+
+$primaryFont: 'Abel';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $primaryFont;
+    .container {
+        // NAV Styling
+        nav {
+            background-color: $navGray;
+            width: 100%;
+            display: flex;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            .navInner {
+                width: 100%;
+                margin: 5px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    height: 120px;
+                    margin: 0 auto;
+                }
+                .navMenu {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    padding: 10px 20px;
+                    color: $grayText;
+                    a:nth-child(3) {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        section {
+            .cards {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+                width: 100%;
+                background-color: white;
+                .box {
+                    background-color: $navGray;
+                    width: 100%;
+                    margin: 10px 0;
+                    h3 {
+                        padding: 0 5px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .small {
+                font-size: 0.8rem;
+            }
+            padding: 10px 15px 50px 15px;
+            h1, h2, h3 {
+                font-weight: 300;
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: $h1Size;
+            }
+            h2 {
+                font-size: $h2Size;
+            }
+           
+        }
+        //Footer Styling
+        footer {
+            background-color: $darkBlue;
+            min-height: 200px;
+            padding: 20px 15px 20px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            color: $navGray;
+            justify-content: center;
+            img {
+                margin: -160px 0 40px 0;
+                height: 200px;
+            }
+            .navMenu {
+                display: flex;
+                justify-content: space-between;
+                width: 70%;
+                margin-bottom: 5rem;
+            }
+            
+            a {
+                color: #419BF9; 
+            }
+            #active {
+                text-decoration: none;
+                color: $navGray;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (min-width: 620px) {
+    body {
+        .container {
+            // NAV Styling
+            align-items: center;
+            nav {
+                .navInner {
+                    width: 60%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    img {
+                        margin: 0;
+                    }
+                    .navMenu {
+                        flex-basis: 400px;
+                    }
+                }
+            }
+            section {
+                width: 60%;
+                margin: 0 auto;
+                .cards {
+                    display: grid; 
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 20px;
+                    margin: 10px 0;
+                    width: 100%;
+                    background-color: white;
+                    .box {
+                        font-weight: bold;
+                    
+                        background-color: $navGray;
+                        h3 {
+                            padding: 0 5px;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+               
+            }
+            footer {
+                flex-direction: column;
+                align-items: center;
+
+                .navMenu {
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
