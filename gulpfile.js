@@ -14,7 +14,7 @@ gulp.task('css:compile', ['css:clean'], function() {
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(csso())
-    .pipe(gulp.dest('public/css'));
+    .pipe(gulp.dest('public/css/'));
 });
 
 gulp.task('build', ['css:compile']);

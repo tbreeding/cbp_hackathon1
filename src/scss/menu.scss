@@ -1,0 +1,36 @@
+$navGray: #F8F9FA;
+$grayText: #F8F9FA - #999999;
+$h1Size: 3rem;
+$h2Size: 2.5rem;
+$h3Size: 2rem;
+$primaryFont : "abel";
+
+.container {
+    font-family: $primaryFont;
+    display: flex;
+    flex-direction: column;
+
+    // nav {
+
+    // }
+    
+    .headlines {
+        display: flex;
+        flex-flow: row wrap;
+        h1 {
+            font-size: $h1Size;
+        }
+        .menu_section {
+            h2 {
+                font-size: $h2Size;
+            }
+
+            .drink {
+                flex-direction: column;
+            }
+            .price {
+                flex-direction: column;
+            }
+        }
+    }
+}
