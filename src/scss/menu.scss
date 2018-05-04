@@ -1,23 +1,27 @@
 $navGray: #F8F9FA;
 $grayText: #F8F9FA - #999999;
+$darkBlue: #31373E;
 $h1Size: 3rem;
 $h2Size: 2.5rem;
 $h3Size: 2rem;
 $primaryFont : "abel";
-
+*{
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
 }
 .container {
+    width: 100%;
     font-family: $primaryFont;
     display: flex;
     flex-direction: column;
     color: $grayText;
     margin: 0 auto;
 section {
-    width: 60%;
     margin: 0 auto;
+    padding: 10px 15px 350px 15px;
 }
 
 
@@ -45,7 +49,7 @@ section {
                 width: 100%;
                 padding: 10px 20px;
                 color: $grayText;
-                a:first-child {
+                a:nth-child(2) {
                     font-weight: bold;
                 }
             }
@@ -58,26 +62,67 @@ section {
         h1 {
             font-size: $h1Size;
         }
-        .menu_section {
-            display: flex;
-            justify-content: space-between;
-            h2 {
-                font-size: $h2Size;
-                width: 100%;
-            }
+        .menu_box {
+        
 
-            .drink {
-                flex-direction: column;
-            }
-            .price {
-                flex-direction: column;
-            }
+            .menu_section {
+                display: flex;
+                justify-content: space-between;
+                h2 {
+                    font-size: $h2Size;
+                    width: 100%;
+                }
+
+                .drink {
+                    flex-direction: column;
+                }
+                .price {
+                    flex-direction: column;
+                        }
+                }
         }
     }
+
+    footer {
+        margin: 0;
+        background-color: $darkBlue;
+        min-height: 200px;
+        padding: 0px 15px 20px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        color: $navGray;
+        justify-content: center;
+        img {
+            max-width: 100%;
+            height: 95vw;
+            margin-top:-200px;
+            max-height: 300px;
+            margin-bottom: 40px;
+        }
+        .navMenu {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+        
+        a {
+            color: #419BF9; 
+        }
+        #active {
+            text-decoration: none;
+            color: $navGray;
+            font-weight: bold;
+        }
+    }
+    
 }
 
 @media only screen and (min-width: 620px) {
     .container {
+        section {
+            width: 60%;
+        }
         nav {
             .navInner {
                 width: 60%;
@@ -101,6 +146,19 @@ section {
                 margin: 0 1.5rem;
             }
         }
-
+        footer {
+            flex-direction: column;
+            align-items: center;
+            .navMenu {
+                width: 25%;
+            }
+            img {
+                max-height: 100%;
+                height:unset;
+                max-height: unset;
+                max-width: 800px;
+                margin-bottom:50px;
+            }
+        }
     }
 }
